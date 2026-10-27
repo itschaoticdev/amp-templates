@@ -44,11 +44,9 @@
     {
         "UpdateStageName": ".NET 10 Runtime Extract",
         "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "ExtractArchive",
-        "UpdateSourceData": "{{$FullBaseDir}}dotnet-runtime.tar.gz",
-        "UpdateSourceTarget": "{{$FullBaseDir}}dotnet",
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true,
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"mkdir -p '{{$FullBaseDir}}dotnet' && tar -xzf '{{$FullBaseDir}}dotnet-runtime.tar.gz' -C '{{$FullBaseDir}}dotnet' && rm -f '{{$FullBaseDir}}dotnet-runtime.tar.gz' && echo '.NET runtime ready'\"",
         "SkipOnFailure": false
     }
 ]
