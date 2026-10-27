@@ -1,0 +1,9 @@
+[
+    {
+        "Protocol": "Both",
+        "Port": "9050",
+        "Ref": "GamePort",
+        "Name": "Game + Web Admin Port",
+        "Description": "UDP for game traffic, TCP/HTTP for the built-in web admin panel and mod sync"
+    }
+]
