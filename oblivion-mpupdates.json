@@ -1,5 +1,21 @@
 [
     {
+        "UpdateStageName": "Remove pre-1.0 seed files",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "cmd.exe",
+        "UpdateSourceArgs": "/c if exist \"{{$FullBaseDir}}mods\\OblivionMp.SeedLoader\\server\\content\\world\" rmdir /s /q \"{{$FullBaseDir}}mods\\OblivionMp.SeedLoader\\server\\content\\world\"",
+        "SkipOnFailure": true
+    },
+    {
+        "UpdateStageName": "Remove pre-1.0 seed files",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"rm -rf '{{$FullBaseDir}}mods/OblivionMp.SeedLoader/server/content/world'\"",
+        "SkipOnFailure": true
+    },
+    {
         "UpdateStageName": "OB:MP Server Download",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "FetchURL",
